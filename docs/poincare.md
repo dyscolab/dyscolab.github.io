@@ -11,19 +11,20 @@ Poincare is a python library for declaring and simulating dynamical systems. It'
 - __Utility__: poincare includes a number of utilities to make model analysis more convenient, including searching for steady states, bistability or limit cycles across a range of parameter values.
 
 ---
-## Installation
+## Installation 
 
 It can be installed from PyPI:
 
-```
+```sh
 pip install -U poincare
 ```
 
 or conda-forge:
 
-```
+```sh
 conda install -c conda-forge poincare
 ```
+
 ---
 ## Documentation
 Documentation is structured as a series of interactive notebooks which cover basic and advanced topics.

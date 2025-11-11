@@ -29,9 +29,10 @@ Otherwise,
 use `pip` or your `pip`-compatible package manager:
 
 ```sh
-pip install simbio  # from PyPI 
+pip install simbio  # from PyPI
 pip install git+https://github.com/dyscolab/simbio.git  # from GitHub
 ```
+
 ---
 ## Documentation
 SimBios documentation is structured as a series of notebooks. For more information, see [Pioncare's documentation](poincare.md#documentation).

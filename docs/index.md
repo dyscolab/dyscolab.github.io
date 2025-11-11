@@ -46,4 +46,4 @@ Dyscolab is an organization dedicated to the creation of open source tools for  
 --- 
 ## Contact
 
-__agregar informacion de contacto__
+__Add contact information__
