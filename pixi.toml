@@ -1,0 +1,19 @@
+[workspace]
+authors = ["Oliverio Starosta <oliveriostarosta@gmail.com>"]
+channels = ["conda-forge"]
+name = "dyscolab_docs"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+zensical = "*"
+poincare = "*"
+matplotlib = "*"
+numpy = "*"
+ipykernel = "*"
+ipywidgets = "*"
+
+[pypi-dependencies]
+simbio = "*"

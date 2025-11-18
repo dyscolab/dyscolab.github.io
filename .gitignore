@@ -1,2 +1,5 @@
 /site
 trace.json
+# pixi environments
+.pixi/*
+!.pixi/config.toml
