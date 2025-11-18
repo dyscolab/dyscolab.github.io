@@ -3,6 +3,28 @@ hide:
   - navigation
 ---
 # Poincare
+
+
+<div class="grid cards" markdown>
+
+- ![Example](images/lokta_volterra_example.svg){ align=left , width="375" } 
+```py
+import numpy as np
+from poincare imprt *
+
+class LotkaVolterra(System):
+    prey: Variable = initial(default=10)
+    predator: Variable = initial(default=1)
+
+    prey_eq = prey.derive() << prey * (1 - predator)
+    predator_eq = predator.derive() << predator * (prey - 1)
+
+sim = Simulator(LotkaVolterra)
+sim.solve(save_at=np.linspace(0, 100, 1000)).plot()
+```
+</div>
+<div style="text-align:center;"> <i><a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lokta-Volterra</a> predator-prey model implemeneted in poincare. </i></div>
+
 Poincare is a python library for declaring and simulating dynamical systems. It's designed around:
 
 - __Modularity__: poincare creates a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/), [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)).

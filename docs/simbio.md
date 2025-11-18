@@ -3,6 +3,27 @@ hide:
   - navigation
 ---
 # SimBio
+<div class="grid cards" markdown>
+
+- ![Example](images/simbio_example.svg){ align=left , width="400" } 
+```py
+from simbio import *
+from simbio.reactions import *
+import numpy as np
+
+class Water(Compartment):
+    H2: Species = initial(default=1)
+    O2: Species = initial(default=1)
+    H2O: Species = initial(default=0)
+
+    creation = Synthesis(A=2 * H2, B=O2, AB=2 * H2O, rate=1)
+    electrolysis = Dissociation(AB=2 * H2O, A=2 * H2, B=O2, rate=0.5)
+
+sim = Simulator(Water)
+sim.solve(save_at=np.linspace(0, 30, 1000)).plot()
+```
+</div>
+<div style="text-align:center;"> Water synthesis and <i><a href="https://en.wikipedia.org/wiki/Electrolysis">electrolysis</a> implemeneted in Simbio. </i></div>
 SimBio is a Python-based package for simulation of Chemical Reaction Networks (CRNs). It extends [poincare](https://github.com/dyscolab/poincare), a package for modelling dynamical systems, to add functionality for CRNs. It's designed around:
 
 - __Modularity__: SimBio is intended to create a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/) [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)). The same model can be compiled for either ODE or stochastic simulation by changing a single line of code.
@@ -37,6 +58,7 @@ pip install git+https://github.com/dyscolab/simbio.git  # from GitHub
 ## Documentation
 SimBios documentation is structured as a series of notebooks. For more information, see [Pioncare's documentation](poincare.md#documentation).
 ### Basics
-- [Getting started with SimBio]: the essentials necessary to simulate CNRs.
+- [Getting started with SimBio](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/Getting_started_with_simbio.ipynb): the essentials necessary to simulate CNRs.
 ### Topic guides
-- [Stochastic simulations]: simulate models stochastically using [Gillespie's algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm).
+- [Importing systems from SBML and BioModels](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/import_sbml.ipynb): how to import models from the [BioModels](https://www.ebi.ac.uk/biomodels/) platform or locally hosted [SBML](https://sbml.org/) (Systems Biology Markup Language) files. 
+- [Stochastic simulations](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/Stochastic.ipynb): simulate models stochastically using [Gillespie's algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm).
