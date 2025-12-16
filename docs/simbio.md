@@ -59,6 +59,7 @@ pip install git+https://github.com/dyscolab/simbio.git  # from GitHub
 SimBios documentation is structured as a series of notebooks. For more information, see [Pioncare's documentation](poincare.md#documentation).
 ### Basics
 - [Getting started with SimBio](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/Getting_started_with_simbio.ipynb): the essentials necessary to simulate CNRs.
+- [Implementing the repressilator in SimBio](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/repressilator.ipynb): an example showing an implementation of the [repressilator](https://en.wikipedia.org/wiki/Repressilator) model in SimBio, including model definition by composition of smaller parts, simulation and parameter sweeps looking at how the period changes.
 ### Topic guides
 - [Importing systems from SBML and BioModels](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/import_sbml.ipynb): how to import models from the [BioModels](https://www.ebi.ac.uk/biomodels/) platform or locally hosted [SBML](https://sbml.org/) (Systems Biology Markup Language) files. 
 - [Stochastic simulations](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/Stochastic.ipynb): simulate models stochastically using [Gillespie's algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm).
