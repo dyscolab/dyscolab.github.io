@@ -8,7 +8,31 @@ hide:
 ### Building open-source tools for modeling, simulation, and analysis across mathematics, physics, chemistry, and biology.
 
 ---
+<div class="grid cards" markdown>
 
+- ![Example](images/bistability_example.svg){ align=left , width="500" } 
+```py
+import numpy as np
+from poincare import *
+
+class BiasedDouble(System):
+    x: Variable = initial(default=-2)
+    v: Derivative = x.derive(initial=0)
+    c: Parameter = assign(default=1)
+
+    eq = v.derive() << -v - x**3 + 2 * x + c
+
+sim_2 = Simulator(BiasedDouble)
+steady = SteadyState(t_end=1000)
+uad = steady.sweep_up_and_down(sim_2, variable=BiasedDouble.c, 
+                               values=np.linspace(-3, 3, 30))
+
+uad.sel(direction="up")["x"].plot()
+uad.sel(direction="down")["x"].plot()
+```
+</div>
+<div style="text-align:center;"> <i><a href="https://en.wikipedia.org/wiki/Bistability">Bistability</a> plot for the biased double well implemented in Poincare. </i></div>
+---
 ## Libraries
 <div class="grid cards" markdown>
 
@@ -45,5 +69,13 @@ Dyscolab is an organization dedicated to the creation of open source tools for  
 
 --- 
 ## Contact
+The dyscolab [discussion forums](https://github.com/orgs/dyscolab/discussions) on github are the main form of communication for dyscolab related topics. 
 
-__Add contact information__
+Dyscolab projects are maintained by:
+
+- Tomás Di Napoli: tomas.dina98@gmail.com
+- Hernán E. Greco:
+- Mauro Silberberg: maurosilber@gmail.com.
+- Oliverio Starosta: oliveriostarosta@gmail.com. 
+
+

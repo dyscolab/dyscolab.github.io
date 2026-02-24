@@ -23,7 +23,7 @@ sim = Simulator(LotkaVolterra)
 sim.solve(save_at=np.linspace(0, 100, 1000)).to_dataframe().plot()
 ```
 </div>
-<div style="text-align:center;"> <i><a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lokta-Volterra</a> predator-prey model implemeneted in Poincare. </i></div>
+<div style="text-align:center;"> <i><a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lokta-Volterra</a> predator-prey model implemented in Poincare. </i></div>
 
 Poincare is a python library for declaring and simulating dynamical systems. It's designed around:
 
