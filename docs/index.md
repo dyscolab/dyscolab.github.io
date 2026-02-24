@@ -40,7 +40,7 @@ Dyscolab is an organization dedicated to the creation of open source tools for  
 
 - [Poincare](poincare.md): general dynamical systems simulation. It's the basis on which the others are built.
 - [SimBio](simbio.md): chemical reaction networks simulation. Built on Poincare, it adds a number of bindings specific to chemical reactions, such as `Species`, `MassAction` or `Synthesis`.
-- [Jablonski](jablonski.md): photochemical systems simulation. Similarly to SimBio, it builds on Poincare by adding specific bindings such as `SingletState`, `Absortion` or `Fluoresence`.
+- [Jablonski](jablonski.md): photochemical systems simulation. Similarly to SimBio, it builds on Poincare by adding specific bindings such as `SingletState`, `Absortion` or `Fluoresence`. It is still in development.
 - [Other libraries](other.md): Dyscolab also maintains other libraries which are auxiliary or related to the main user facing ones. 
 
 --- 

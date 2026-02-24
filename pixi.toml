@@ -9,11 +9,11 @@ version = "0.1.0"
 
 [dependencies]
 zensical = "*"
-poincare = "*"
 matplotlib = "*"
 numpy = "*"
 ipykernel = "*"
 ipywidgets = "*"
 
 [pypi-dependencies]
-simbio = "*"
+simbio = ">=1.0.0b3"
+poincare = ">=1.0.0b3"

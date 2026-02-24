@@ -20,7 +20,7 @@ class LotkaVolterra(System):
     predator_eq = predator.derive() << predator * (prey - 1)
 
 sim = Simulator(LotkaVolterra)
-sim.solve(save_at=np.linspace(0, 100, 1000)).plot()
+sim.solve(save_at=np.linspace(0, 100, 1000)).to_dataframe().plot()
 ```
 </div>
 <div style="text-align:center;"> <i><a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lokta-Volterra</a> predator-prey model implemeneted in Poincare. </i></div>
@@ -49,10 +49,14 @@ conda install -c conda-forge poincare
 
 ---
 ## Documentation
-Documentation is structured as a series of interactive notebooks which cover basic and advanced topics.
+Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran by following the links in the highlighted titles to open them in the browser or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. 
 ### Basics
-- [Getting started with Poincare](https://colab.research.google.com/github/dyscolab/poincare/blob/main/docs/Getting_started_with_poincare.ipynb): the essentials necessary to simulate models.
-- [Composition](https://colab.research.google.com/github/dyscolab/poincare/blob/main/docs/Composing.ipynb): how to combine smaller models to create more complex ones, one of Poincare's key features.
-- [Simulators](https://colab.research.google.com/github/dyscolab/poincare/blob/main/docs/Simulation.ipynb): more on how configure the simulation, including switching methods and backends.
+- [Getting started with Poincare](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/asymptotic_behaviour.py): the essentials necessary to simulate models.
+- [Composition](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/composing.py): how to combine smaller models to create more complex ones, one of Poincare's key features.
+- [Simulators](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/simulation.py): more on how configure the simulation, including switching methods and backends.
 ### Topic guides
-- [Asymptotic behaviour and parameter sweeps](https://colab.research.google.com/github/dyscolab/poincare/blob/main/docs/Asymptotic_behaviour.ipynb): characterize the asymptotic behaviour of the system, including the search for steady states, bistability and limit cycles, across a range of parameter values.
+- [Asymptotic behaviour and parameter sweeps](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/asymptotic_behaviour.py): characterize the asymptotic behaviour of the system, including the search for steady states, bistability and limit cycles, across a range of parameter values.
+
+
+## GitHub
+Poincare is developed in it's [github repo](https://github.com/dyscolab/poincare).
