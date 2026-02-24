@@ -74,7 +74,7 @@ The dyscolab [discussion forums](https://github.com/orgs/dyscolab/discussions) o
 Dyscolab projects are maintained by:
 
 - Tomás Di Napoli: tomas.dina98@gmail.com
-- Hernán E. Greco:
+- Hernán E. Greco: hgrecco@df.uba.ar
 - Mauro Silberberg: maurosilber@gmail.com.
 - Oliverio Starosta: oliveriostarosta@gmail.com. 
 
