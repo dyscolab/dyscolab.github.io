@@ -27,8 +27,8 @@ steady = SteadyState(t_end=1000)
 uad = steady.sweep_up_and_down(sim_2, variable=BiasedDouble.c, 
                                values=np.linspace(-3, 3, 30))
 
-uad.sel(direction="up")["x"].plot()
-uad.sel(direction="down")["x"].plot()
+uad.sel(direction="up")["x"].plot(label = "Up")
+uad.sel(direction="down")["x"].plot(label - "Down")
 ```
 </div>
 <div style="text-align:center;"> <i><a href="https://en.wikipedia.org/wiki/Bistability">Bistability</a> plot for the biased double well implemented in Poincare. </i></div>
@@ -73,9 +73,9 @@ The dyscolab [discussion forums](https://github.com/orgs/dyscolab/discussions) o
 
 Dyscolab projects are maintained by:
 
-- Tomás Di Napoli: tomas.dina98@gmail.com
-- Hernán E. Greco: hgrecco@df.uba.ar
+- Tomás Di Napoli: tomas.dina98@gmail.com.
+- Hernán E. Greco: hgrecco@df.uba.ar.
 - Mauro Silberberg: maurosilber@gmail.com.
-- Oliverio Starosta: oliveriostarosta@gmail.com. 
+- Oliverio Starosta: oliveriostarosta@gmail.com.
 
 
