@@ -51,7 +51,7 @@ conda install -c conda-forge poincare
 ## Documentation
 Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran by following the links in the highlighted titles to open them in the browser or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. 
 ### Basics
-- [Getting started with Poincare](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/asymptotic_behaviour.py): the essentials necessary to simulate models.
+- [Getting started with Poincare](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/getting_started_with_poincare.py): the essentials necessary to simulate models.
 - [Composition](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/composing.py): how to combine smaller models to create more complex ones, one of Poincare's key features.
 - [Simulators](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/simulation.py): more on how configure the simulation, including switching methods and backends.
 ### Topic guides
