@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 # Jablonski
- Jablonski is the next Jablonski is next dyscolab package, which is still in development. It will be for for simulating photochemical systems, providing a convenient abstraction to describes states and transitions in molecular systems.
+ Jablonski is the next Jablonski is next dyscolab package, which is still in development. It will be for simulating photochemical systems, providing a convenient abstraction to describes states and transitions in molecular systems.
 
 ---
 ## Installation
