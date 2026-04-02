@@ -26,7 +26,7 @@ sim.solve(save_at=np.linspace(0, 30, 1000)).to_dataframe().plot()
 <div style="text-align:center;"><i>Water synthesis and <a href="https://en.wikipedia.org/wiki/Electrolysis">electrolysis</a> implemeneted in SimBio. </i></div>
 SimBio is a Python-based package for simulation of Chemical Reaction Networks (CRNs). It extends [poincare](https://github.com/dyscolab/poincare), a package for modelling dynamical systems, to add functionality for CRNs. It's designed around:
 
-- __Modularity__: SimBio is intended to create a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/) [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)). The same model can be compiled for either ODE or stochastic simulation by changing a single line of code (upcoming).
+- __Modularity__: SimBio is intended to create a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/) [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)). The same model can be compiled for either ODE or stochastic simulation by changing a single line of code.
 - __Composability__: models are composable, allowing for the combination of smaller systems to create larger ones; complex models can be broken up into more manageable parts.
 - __Reproducibility__: it intends to be a centralized place for all information concerning models, making it easy to extract data about information and parameters and encouraging consistency between analytical formulations and numerical implementations. Models can also be imported directly from the [SMBL](https://sbml.org/) format (upcoming).
 
@@ -62,6 +62,7 @@ Documentation is structured as a series of interactive [marimo](https://marimo.i
 - [Implementing the repressilator in SimBio](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/repressilator.py): an example showing an implementation of the [repressilator](https://en.wikipedia.org/wiki/Repressilator) model in SimBio, including model definition by composition of smaller parts, simulation and parameter sweeps looking at how the period changes.
 ### Topic guides
 - [Using volume in simbio](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/using_volume.py): explains how to make models with volume using `Compartment` and represent variables which react to volume as `Species`, using either concentrations or absolute amounts.
+- [Stochastic simulations](Stochastic.md#documentation): how to simulate the same systems stochastically using gillespie's algorithm.
 
 <!-- - [Importing systems from SBML and BioModels](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/import_sbml.ipynb): how to import models from the [BioModels](https://www.ebi.ac.uk/biomodels/) platform or locally hosted [SBML](https://sbml.org/) (Systems Biology Markup Language) files. 
 - [Stochastic simulations](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/Stochastic.ipynb): simulate models stochastically using [Gillespie's algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm). --> 
