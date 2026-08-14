@@ -20,3 +20,6 @@ simbio = ">=1.0.0b3"
 poincare = ">=1.0.0b3"
 jablonski = ">=0.2.0"
 rebop = "*"
+
+[tasks.update-static]
+cmd = "git -C dyscolab-tutorials pull && python update_static.py"
