@@ -3,3 +3,5 @@ trace.json
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+
+Parametrized_Decay_report.tex
