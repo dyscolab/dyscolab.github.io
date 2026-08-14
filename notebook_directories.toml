@@ -1,0 +1,11 @@
+# Config for update_dependencies.py
+
+# Directory to output the html sites
+output_dir = "docs/static_notebooks"
+
+# Directories to search for notebooks
+notebook_dirs= [
+    "dyscolab-tutorials/jablonski",
+    "dyscolab-tutorials/poincare",
+    "dyscolab-tutorials/simbio",
+]
