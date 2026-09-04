@@ -3,6 +3,8 @@
 """ 
 Script to create static html sites from documentation notebooks in dyscolab-tutorials. 
 Configure output and notebbok directories from notebook_directories.toml.
+Run with:
+pixi run update_static
 """
 from pathlib import Path
 import subprocess
