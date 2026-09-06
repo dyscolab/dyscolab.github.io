@@ -57,6 +57,6 @@ Documentation is structured as a series of interactive [marimo](https://marimo.i
 ### Topic guides
 - **Asymptotic behaviour and parameter sweeps**: characterize the asymptotic behaviour of the system, including the search for steady states, bistability and limit cycles, across a range of parameter values. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/asymptotic_behaviour.py) / [Static](static_notebooks/asymptotic_behaviour.html)
 
-
+---
 ## GitHub
 Poincare is developed in it's [github repo](https://github.com/dyscolab/poincare).

@@ -53,3 +53,7 @@ conda install -c conda-forge jablonski
 Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. For more information, see [Pioncare's documentation](poincare.md#documentation).
 ### Basics
 - **Getting started with Jablonski**: the essentials necessary to use jablonski. [Interactive](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/jablonski/getting_started_with_jablonski.py) / [Static](static_notebooks/getting_started_with_jablonski.html)
+
+---
+## GitHub
+Jablonski is developed in it's [github repo](https://github.com/dyscolab/jablonski).
