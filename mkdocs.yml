@@ -5,6 +5,7 @@ nav:
   - SimBio: simbio.md
   - Jablonski: jablonski.md
   - Other: other.md
+  - About: about.md
 theme:
   name: material
   features:
