@@ -1,0 +1,12 @@
+default_install_hook_types: [pre-commit, pre-push]
+
+repos:
+  - repo: local
+    hooks:
+      - id: update-static-notebooks
+        name: Build static notebooks
+        entry: pixi run python update_static.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]

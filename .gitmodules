@@ -1,3 +1,4 @@
 [submodule "dyscolab-tutorials"]
 	path = dyscolab-tutorials
 	url = https://github.com/dyscolab/dyscolab-tutorials
+	branch = main

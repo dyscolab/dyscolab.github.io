@@ -15,12 +15,29 @@ ipykernel = "*"
 ipywidgets = "*"
 marimo = "*"
 seaborn = "*"
+pre-commit = ">=4.7.0,<5"
+python-libsbml = ">=5.21.2,<6"
 
 [pypi-dependencies]
 simbio = ">=1.2.0"
 poincare = ">=1.2.0"
 jablonski = ">=0.4.0"
 rebop = "*"
+biomodels = ">=0.3.2, <0.4"
 
 [tasks.update-static]
-cmd = "git -C dyscolab-tutorials pull && python update_static.py"
+cmd = "git submodule update --remote dyscolab-tutorials && python update_static.py"
+
+[environments]
+default = []
+local = ["local"]
+
+[feature.local.dependencies]
+uv = "*"
+
+# Prepends the local package repos (../u2602) to Python's module search path in the `local` env.
+[feature.local.target.unix.activation.env]
+PYTHONPATH = "${PIXI_PROJECT_ROOT}/../u2602/symbolite/src:${PIXI_PROJECT_ROOT}/../u2602/poincare/src:${PIXI_PROJECT_ROOT}/../u2602/simbio/src:${PIXI_PROJECT_ROOT}/../u2602/jablonski/src:${PYTHONPATH}"
+
+[feature.local.target.win.activation.env]
+PYTHONPATH = "${PIXI_PROJECT_ROOT}/../u2602/symbolite/src;${PIXI_PROJECT_ROOT}/../u2602/poincare/src;${PIXI_PROJECT_ROOT}/../u2602/simbio/src;${PIXI_PROJECT_ROOT}/../u2602/jablonski/src;${PYTHONPATH}"

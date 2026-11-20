@@ -8,6 +8,7 @@ pixi run update_static
 """
 from pathlib import Path
 import subprocess
+import sys
 import tomllib
 
 
@@ -88,6 +89,7 @@ def main() -> None:
         print("\nFailed notebooks:")
         for notebook in failed:
             print(f"  - {notebook}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
