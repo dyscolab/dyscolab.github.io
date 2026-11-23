@@ -5,7 +5,7 @@ repos:
     hooks:
       - id: update-static-notebooks
         name: Build static notebooks
-        entry: pixi run -e local python update_static.py
+        entry: pixi run python pre_push.py
         language: system
         pass_filenames: false
         always_run: true

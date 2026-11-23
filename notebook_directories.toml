@@ -9,3 +9,9 @@ notebook_dirs= [
     "dyscolab-tutorials/poincare",
     "dyscolab-tutorials/simbio",
 ]
+
+# Pixi environment the pre-push hook builds with, per branch.
+# Branches not listed here skip the build.
+[pre_push_envs]
+main = "default"
+dev = "local"
