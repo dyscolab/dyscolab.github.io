@@ -24,7 +24,7 @@ sim.solve(save_at=np.linspace(0, 30, 1000)).to_dataframe().plot()
 ```
 </div>
 <div style="text-align:center;"><i>Water synthesis and <a href="https://en.wikipedia.org/wiki/Electrolysis">electrolysis</a> implemeneted in SimBio. </i></div>
-SimBio is a Python-based package for simulation of Chemical Reaction Networks (CRNs). It extends [poincare](https://github.com/dyscolab/poincare), a package for modelling dynamical systems. It's designed around:
+SimBio is a Python-based package for simulation of Chemical Reaction Networks (CRNs). It extends [Poincare](https://github.com/dyscolab/poincare), a package for modelling dynamical systems. It's designed around:
 
 - __Modularity__: SimBio is intended to create a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/) [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)). The same model can be compiled for either ODE or stochastic simulation by changing a single line of code.
 - __Composability__: models are composable, allowing for the combination of smaller systems to create larger ones; complex models can be broken up into more manageable parts.
@@ -56,12 +56,12 @@ pip install git+https://github.com/dyscolab/simbio.git  # from GitHub
 
 ---
 ## Documentation
-Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. For more information, see [Pioncare's documentation](poincare.md#documentation).
+Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. For more information, see [Poincare's documentation](poincare.md#documentation).
 ### Basics
 - **Getting started with SimBio**: the essentials necessary to simulate CNRs. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/getting_started_with_simbio.py) / [Static](static_notebooks/getting_started_with_simbio.html)
 - **Implementing the repressilator in SimBio**: an example showing an implementation of the [repressilator](https://en.wikipedia.org/wiki/Repressilator) model in SimBio, including model definition by composition of smaller parts, simulation and parameter sweeps looking at how the period changes. [Interactive](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/repressilator.py) / [Static](static_notebooks/repressilator.html)
 ### Topic guides
-- **Using volume in simbio**: explains how to make models with volume using `Compartment` and represent variables which react to volume as `Species`, using either concentrations or absolute amounts. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/using_volume.py) / [Static](static_notebooks/using_volume.html)
+- **Using volume in SimBio**: explains how to make models with volume using `Compartment` and represent variables which react to volume as `Species`, using either concentrations or absolute amounts. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/using_volume.py) / [Static](static_notebooks/using_volume.html)
 - **Stochastic simulations**: how to simulate the same systems stochastically using gillespie's algorithm. [Static](static_notebooks/stochastic.html) *(stochastich simulations cannot be run online, to see the interactive version clone the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository)*
 
 <!-- - [Importing systems from SBML and BioModels](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/import_sbml.ipynb): how to import models from the [BioModels](https://www.ebi.ac.uk/biomodels/) platform or locally hosted [SBML](https://sbml.org/) (Systems Biology Markup Language) files. 

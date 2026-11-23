@@ -22,7 +22,7 @@ fig, ax = graph_spectra(
 ```
 </div>
 <div style="text-align:center;">  Spectra from simplified hydrogen model in Jablonski. Widths are arbitrary. </i></div>
-Jablonski is a Python-based package for simulation of photochemical systems. It extends [poincare](https://github.com/dyscolab/poincare), a package for modelling dynamical systems. It's designed around:
+Jablonski is a Python-based package for simulation of photochemical systems. It extends [Poincare](https://github.com/dyscolab/poincare), a package for modelling dynamical systems. It's designed around:
 
 - __Modularity__: Jablonski is intended to create a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/) [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)). 
 
@@ -30,7 +30,7 @@ Jablonski is a Python-based package for simulation of photochemical systems. It 
 
 - __Reproducibility__: it intends to be a centralized place for all information concerning models, making it easy to extract data about information and parameters and encouraging consistency between analytical formulations and numerical implementations.
 
-- __Utility__: jablonski contains a number of simulation and analysis tools, such as piecewise simulation for pulse excitations and getting a system's time resolved and steady state emission spectra.
+- __Utility__: Jablonski contains a number of simulation and analysis tools, such as piecewise simulation for pulse excitations and getting a system's time resolved and steady state emission spectra.
 
 ---
 ## Installation
@@ -50,9 +50,9 @@ conda install -c conda-forge jablonski
 
 ---
 ## Documentation
-Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. For more information, see [Pioncare's documentation](poincare.md#documentation).
+Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. For more information, see [Poincare's documentation](poincare.md#documentation).
 ### Basics
-- **Getting started with Jablonski**: the essentials necessary to use jablonski. [Interactive](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/jablonski/getting_started_with_jablonski.py) / [Static](static_notebooks/getting_started_with_jablonski.html)
+- **Getting started with Jablonski**: the essentials necessary to use Jablonski. [Interactive](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/jablonski/getting_started_with_jablonski.py) / [Static](static_notebooks/getting_started_with_jablonski.html)
 
 ---
 ## GitHub
