@@ -5,3 +5,4 @@ trace.json
 !.pixi/config.toml
 
 Parametrized_Decay_report.tex
+__pycache__/
