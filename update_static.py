@@ -7,12 +7,26 @@ Run with:
 pixi run update_static
 """
 from pathlib import Path
+import os
 import subprocess
 import sys
 import tomllib
 
 
 CONFIG_FILE = Path("notebook_directories.toml")
+
+# Load deterministic_build/sitecustomize.py in the export so that the output
+# is the same on every build (see that file), and keep timestamps out of plots.
+DETERMINISTIC_DIR = Path(__file__).resolve().parent / "deterministic_build"
+BUILD_ENV = {
+    **os.environ,
+    "PYTHONPATH": os.pathsep.join(
+        filter(None, [str(DETERMINISTIC_DIR), os.environ.get("PYTHONPATH")])
+    ),
+    "SOURCE_DATE_EPOCH": "0",
+    # Fixes the order of sets, which Jablonski's level diagrams draw from.
+    "PYTHONHASHSEED": "0",
+}
 
 
 def load_config(path: Path) -> tuple[list[Path], Path]:
@@ -50,6 +64,7 @@ def export_notebook(
                 "--no-sandbox",
             ],
             check=True,
+            env=BUILD_ENV,
         )
         return True
 
