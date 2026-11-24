@@ -28,7 +28,7 @@ SimBio is a Python-based package for simulation of Chemical Reaction Networks (C
 
 - __Modularity__: SimBio is intended to create a layer to separate the actual declaration and simulation of models, allowing to easily switch between methods and compile to different backends (including [NumPy](https://numpy.org/) [Numba](https://numba.pydata.org/) and [JAX](https://docs.jax.dev/en/latest/)). The same model can be compiled for either ODE or stochastic simulation by changing a single line of code.
 - __Composability__: models are composable, allowing for the combination of smaller systems to create larger ones; complex models can be broken up into more manageable parts.
-- __Reproducibility__: it intends to be a centralized place for all information concerning models, making it easy to extract data about information and parameters and encouraging consistency between analytical formulations and numerical implementations. Models can also be imported directly from the [SMBL](https://sbml.org/) format (upcoming).
+- __Reproducibility__: it intends to be a centralized place for all information concerning models, making it easy to extract data about information and parameters and encouraging consistency between analytical formulations and numerical implementations. Models can also be imported directly from the [SBML](https://sbml.org/) format.
 
 ---
 ## Installation
@@ -54,6 +54,25 @@ pip install simbio  # from PyPI
 pip install git+https://github.com/dyscolab/simbio.git  # from GitHub
 ```
 
+### Agent skill
+
+SimBio ships with the `dyscolab-modeling` agent skill, which teaches coding agents how to use Poincare, SimBio and Jablonski. It is downloaded with the library, but has to be added to your agent's skills folder separately.
+
+In pixi projects, link it with [pixi skills](https://pixi.prefix.dev/dev/integration/extensions/pixi_skills/), so it updates together with the library:
+
+```sh
+pixi global install pixi-skills                   # once
+pixi skills manage --backend claude --scope local  # or another agent's backend
+```
+
+In any other environment, copy it with the environment's Python, and run the command again after upgrading the library:
+
+```sh
+python -m poincare.skill install --dest .agents/skills   # or .claude/skills, ~/.codex/skills, ...
+```
+
+See [Agent skills](skills.md) for more details.
+
 ---
 ## Documentation
 Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. For more information, see [Poincare's documentation](poincare.md#documentation).
@@ -62,10 +81,8 @@ Documentation is structured as a series of interactive [marimo](https://marimo.i
 - **Implementing the repressilator in SimBio**: an example showing an implementation of the [repressilator](https://en.wikipedia.org/wiki/Repressilator) model in SimBio, including model definition by composition of smaller parts, simulation and parameter sweeps looking at how the period changes. [Interactive](https://marimo.app/https://github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/repressilator.py) / [Static](static_notebooks/repressilator.html)
 ### Topic guides
 - **Using volume in SimBio**: explains how to make models with volume using `Compartment` and represent variables which react to volume as `Species`, using either concentrations or absolute amounts. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/using_volume.py) / [Static](static_notebooks/using_volume.html)
-- **Stochastic simulations**: how to simulate the same systems stochastically using gillespie's algorithm. [Static](static_notebooks/stochastic.html) *(stochastich simulations cannot be run online, to see the interactive version clone the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository)*
-
-<!-- - [Importing systems from SBML and BioModels](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/import_sbml.ipynb): how to import models from the [BioModels](https://www.ebi.ac.uk/biomodels/) platform or locally hosted [SBML](https://sbml.org/) (Systems Biology Markup Language) files. 
-- [Stochastic simulations](https://colab.research.google.com/github/dyscolab/simbio/blob/master/docs/notebooks/Stochastic.ipynb): simulate models stochastically using [Gillespie's algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm). --> 
+- **Stochastic simulations**: how to simulate the same systems stochastically using the  [Gillespie algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm). [Static](static_notebooks/stochastic.html) *(stochastich simulations cannot be run online, to see the interactive version clone the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository)*
+- **Importing SBML models**: load models from [SBML](https://sbml.org/) files or the [BioModels](https://www.ebi.ac.uk/biomodels/) repository as SimBio systems, which can then be simulated and analysed like any other model. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/simbio/sbml.py) / [Static](static_notebooks/sbml.html)
 
 ---
 ## GitHub

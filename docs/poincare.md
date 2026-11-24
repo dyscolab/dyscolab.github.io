@@ -47,6 +47,25 @@ or conda-forge:
 conda install -c conda-forge poincare
 ```
 
+### Agent skill
+
+Poincare ships with the `dyscolab-modeling` agent skill, which teaches coding agents how to use Poincare, SimBio and Jablonski. It is downloaded with the library, but has to be added to your agent's skills folder separately.
+
+In pixi projects, link it with [pixi skills](https://pixi.prefix.dev/dev/integration/extensions/pixi_skills/), so it updates together with the library:
+
+```sh
+pixi global install pixi-skills                   # once
+pixi skills manage --backend claude --scope local  # or another agent's backend
+```
+
+In any other environment, copy it with the environment's Python, and run the command again after upgrading the library:
+
+```sh
+python -m poincare.skill install --dest .agents/skills   # or .claude/skills, ~/.codex/skills, ...
+```
+
+See [Agent skills](skills.md) for more details.
+
 ---
 ## Documentation
 Documentation is structured as a series of interactive [marimo](https://marimo.io/) notebooks which cover basic and advanced topics. They can be ran in the browser either in a static or interactive version or by cloning the [dyscolab-tutorials](https://github.com/dyscolab/dyscolab-tutorials) repository to open them locally. 
@@ -56,6 +75,8 @@ Documentation is structured as a series of interactive [marimo](https://marimo.i
 - **Simulators**: more on how configure the simulation, including switching methods and backends. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/simulation.py) / [Static](static_notebooks/simulation.html)
 ### Topic guides
 - **Asymptotic behaviour and parameter sweeps**: characterize the asymptotic behaviour of the system, including the search for steady states, bistability and limit cycles, across a range of parameter values. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/asymptotic_behaviour.py) / [Static](static_notebooks/asymptotic_behaviour.html)
+- **Fitting models to data**: fit parameters and initial conditions to measured time courses or steady states with `fit_result`, `fit_steady_state` and `Fitter`, including fitting several experiments at once with shared parameters. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/fitting.py) / [Static](static_notebooks/fitting.html)
+- **Units**: use physical units from [pint](https://github.com/hgrecco/pint) in variables, parameters and simulation times, and get results that carry the corresponding units. [Interactive](https://marimo.app/github.com/dyscolab/dyscolab-tutorials/blob/main/poincare/units.py) / [Static](static_notebooks/units.html)
 
 ---
 ## GitHub
