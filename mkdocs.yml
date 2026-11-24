@@ -4,6 +4,7 @@ nav:
   - Poincare: poincare.md
   - SimBio: simbio.md
   - Jablonski: jablonski.md
+  - Skills: skills.md
   - Other: other.md
   - About: about.md
 theme:
